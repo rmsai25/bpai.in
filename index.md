@@ -1,7 +1,12 @@
+
 ---
 layout: default
 title: Home
+description: Brightpath AI builds pragmatic, private, and reliable AI systems for real businesses. Privacy-first. Currently in stealth — early partners welcome.
+image: /assets/img/og-bpai.png   # <— social preview image for WhatsApp/Facebook/Twitter
+permalink: /
 ---
+
 
 <style>
 :root{
