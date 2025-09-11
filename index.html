@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BPAI — Brightpath Technology & Services Pvt. Ltd.</title>
+  <meta name="description" content="BPAI is crafting cutting-edge AI solutions. Currently in stealth.">
+  <meta name="theme-color" content="#0f1020" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="BPAI — Building the next wave of AI" />
+  <meta property="og:description" content="We’re crafting cutting-edge AI solutions at Brightpath Technology & Services Pvt. Ltd. Currently in stealth." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bpai.in/" />
+  <meta property="og:image" content="https://bpai.in/og-image.png" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #0b0c1a;
+      --bg-soft: #111228;
+      --card: #151734;
+      --text: #e7e9ff;
+      --text-dim: #b7b9d4;
+      --accent: #7c5cff;
+      --accent-2: #00e0b8;
+      --ring: rgba(124,92,255,.45);
+      --shadow: 0 10px 30px rgba(0,0,0,.4), inset 0 1px 0 rgba(255,255,255,.03);
+      --radius: 18px;
+      --grid-gap: 18px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 600px at 80% -10%, rgba(124,92,255,.15), transparent 70%),
+        radial-gradient(900px 500px at -10% 10%, rgba(0,224,184,.12), transparent 60%),
+        linear-gradient(180deg, #0b0c1a 0%, #0a0b16 100%);
+      background-attachment: fixed;
+      letter-spacing: .2px;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1080px;margin:0 auto;padding:24px}
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:10px 16px;margin-top:4px;background:rgba(21,23,52,.5);
+      border:1px solid rgba(255,255,255,.06); border-radius:var(--radius);
+      backdrop-filter: blur(8px); box-shadow: var(--shadow);
+    }
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px}
+    .logo{
+      width:28px;height:28px;border-radius:8px;background:
+      conic-gradient(from 180deg at 50% 50%, var(--accent), var(--accent-2), var(--accent));
+      box-shadow:0 0 0 2px rgba(255,255,255,.08), 0 8px 24px rgba(124,92,255,.35);
+    }
+    .pill{
+      padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.08);
+      background:rgba(255,255,255,.02);color:var(--text-dim);font-size:.9rem;
+      display:inline-flex;align-items:center;gap:10px
+    }
+    .hero{
+      text-align:center;padding:90px 14px 48px;position:relative;
+    }
+    .hero h1{
+      font-family: "DM Sans", Inter, sans-serif;
+      font-size: clamp(36px, 7vw, 72px);
+      line-height: 1.02;margin: 8px 0 16px;
+      background: linear-gradient(180deg, #fff, #cfd3ff 65%, #aeb4ff);
+      -webkit-background-clip: text; background-clip:text; color: transparent;
+      text-shadow: 0 6px 40px rgba(124,92,255,.18);
+    }
+    .hero p{max-width:820px;margin:0 auto;color:var(--text-dim);font-size:clamp(16px,2.2vw,18px)}
+    .cta{
+      margin-top:26px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap
+    }
+    .btn{
+      padding:13px 18px;border-radius:12px;border:1px solid rgba(255,255,255,.08);
+      background:linear-gradient(180deg, #1a1c3d, #141633);
+      color:#fff;font-weight:600;letter-spacing:.2px;box-shadow:var(--shadow);position:relative;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .btn:hover{transform: translateY(-2px);border-color:var(--ring);box-shadow:0 20px 40px rgba(0,0,0,.45), 0 0 0 6px var(--ring)}
+    .btn.alt{background:linear-gradient(180deg, #102025, #0f1b20);border-color:rgba(0,224,184,.25)}
+    .hint{margin-top:10px;font-size:.9rem;color:var(--text-dim)}
+    .grid{
+      display:grid;grid-template-columns: repeat(12, 1fr);gap: var(--grid-gap);margin-top:44px
+    }
+    .card{
+      grid-column: span 4;background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+      border:1px solid rgba(255,255,255,.07); border-radius: var(--radius); padding:20px;
+      box-shadow: var(--shadow); position: relative; overflow: hidden;
+    }
+    .card .badge{
+      display:inline-flex;align-items:center;gap:8px;
+      font-size:.8rem;color:#cfd3ff;background:rgba(124,92,255,.18);
+      border:1px solid rgba(124,92,255,.35); padding:6px 10px;border-radius:999px
+    }
+    .card h3{margin:12px 0 8px;font-size:1.2rem}
+    .card p{color:var(--text-dim);margin:0}
+    .card:after{
+      content:""; position:absolute; inset:auto -20% -60% -20%;
+      height:140px; background: radial-gradient(40% 120% at 50% 0%, rgba(124,92,255,.25), transparent 60%);
+      filter: blur(22px);
+    }
+    .wide{grid-column: span 8}
+    .thin{grid-column: span 4}
+    .marquee{
+      margin-top:40px;border:1px dashed rgba(255,255,255,.12);border-radius:var(--radius);
+      padding:12px 0;background:rgba(255,255,255,.02);overflow:hidden;position:relative
+    }
+    .marquee ul{
+      display:flex;gap:28px;list-style:none; padding:0;margin:0;
+      animation: slide 28s linear infinite;
+      white-space: nowrap;
+    }
+    .marquee li{
+      color:#c7cbff;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);
+      padding:8px 14px;border-radius:999px
+    }
+    @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+    .section{margin:64px auto 24px}
+    .section h2{
+      font-family:"DM Sans", Inter, sans-serif;font-size:clamp(22px,3.6vw,32px);margin:0 0 6px
+    }
+    .sm{font-size:.98rem;color:var(--text-dim);margin-top:2px}
+
+    .foot{
+      margin:60px 0 10px;padding:16px;border-top:1px solid rgba(255,255,255,.08);
+      color:var(--text-dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px
+    }
+    .foot a.link{color:#cfd3ff;text-decoration:underline dotted 1px}
+    .sep{opacity:.18;margin:0 10px}
+    .tag{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.12);color:#cfd3ff;background:rgba(255,255,255,.02)}
+    .status{
+      display:inline-flex;align-items:center;gap:8px;
+      background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);
+      padding:8px 12px;border-radius:999px;color:#cfd3ff
+    }
+    .dot{width:8px;height:8px;border-radius:999px;background:linear-gradient(180deg, #00e0b8, #00b493);box-shadow:0 0 0 6px rgba(0,224,184,.12)}
+    .kicker{color:#aeb4ff; font-weight:700; letter-spacing:.18em; text-transform:uppercase; font-size:.75rem}
+    .ghost{opacity:.35}
+    .sr-only{position:absolute;left:-10000px;width:1px;height:1px;top:auto;overflow:hidden}
+    .cols{columns:2;gap:18px}
+    .card ul{margin:6px 0 0 16px; padding:0}
+    .card li{margin:6px 0}
+    @media (max-width: 980px){
+      .card,.wide,.thin{grid-column: span 12}
+      .cols{columns:1}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Nav -->
+    <nav class="nav" aria-label="Primary">
+      <div class="brand">
+        <span class="logo" aria-hidden="true"></span>
+        <span>BPAI</span>
+      </div>
+      <div class="pill">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Stealth mode — building quietly</span>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero" id="home">
+      <p class="kicker">Brightpath Technology &amp; Services Pvt. Ltd.</p>
+      <h1>We’re crafting&nbsp;cutting-edge&nbsp;AI.<br><span class="ghost">You’ll hear from us soon.</span></h1>
+      <p>
+        We’re assembling pragmatic, production-grade AI systems—fast, private, and reliable.
+        The kind you can trust to power real businesses at scale. If you’re an early adopter
+        or potential partner, we’d love to connect.
+      </p>
+      <div class="cta">
+        <a class="btn" href="#early">Request early access</a>
+        <a class="btn alt" href="#vision">Read our vision</a>
+      </div>
+      <div class="hint">bpai.in — a Brightpath initiative</div>
+    </header>
+
+    <!-- Feature Cards -->
+    <section class="grid section" id="vision" aria-label="Vision & Focus">
+      <article class="card wide">
+        <span class="badge">Our vision</span>
+        <h3>AI that’s useful from day&nbsp;one</h3>
+        <p>
+          The next era of AI won’t be about demos—it’ll be about dependable,
+          domain-aware systems that quietly deliver outcomes. We’re focused on
+          <strong>latency-aware inference</strong>, <strong>cost-efficient deployment</strong>,
+          and <strong>privacy-first design</strong> to make AI a default capability for modern teams.
+        </p>
+      </article>
+
+      <article class="card thin">
+        <span class="badge">Focus areas</span>
+        <h3>Where we’re building</h3>
+        <ul>
+          <li>Agentic workflows for ops and support</li>
+          <li>Enterprise-ready private RAG</li>
+          <li>Evaluation, safety &amp; observability</li>
+          <li>On-device &amp; edge inference</li>
+        </ul>
+      </article>
+
+      <article class="card thin">
+        <span class="badge">Principles</span>
+        <h3>What guides us</h3>
+        <ul>
+          <li>Ship small, iterate fast</li>
+          <li>Security isn’t optional</li>
+          <li>Clear metrics over vibes</li>
+          <li>Delight in the details</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee" aria-hidden="true">
+      <ul>
+        <li>Latency-aware</li>
+        <li>Private by design</li>
+        <li>Agentic</li>
+        <li>Retrieval-augmented</li>
+        <li>Observability</li>
+        <li>Safety</li>
+        <li>Eval-driven</li>
+        <li class="sep">•</li>
+        <li>Latency-aware</li>
+        <li>Private by design</li>
+        <li>Agentic</li>
+        <li>Retrieval-augmented</li>
+        <li>Observability</li>
+        <li>Safety</li>
+        <li>Eval-driven</li>
+      </ul>
+    </div>
+
+    <!-- Early Access -->
+    <section class="grid section" id="early" aria-label="Early Access">
+      <article class="card thin">
+        <span class="badge">Early partners</span>
+        <h3>Co-build with us</h3>
+        <p>
+          We’re selectively onboarding design partners who bring hairy, high-impact problems.
+          In return, you’ll get hands-on builds, custom integrations, and influence over the roadmap.
+        </p>
+        <p class="sm">B2B SaaS, ops-heavy marketplaces, fintech, and support platforms are a great fit.</p>
+      </article>
+
+      <article class="card wide">
+        <span class="badge">Get in touch</span>
+        <h3>Say hello</h3>
+        <div class="cols">
+          <p>
+            Email us a short note about your use-case, current stack, and what “success” looks like.
+            We’ll reply with next steps as we expand private access.
+          </p>
+          <p>
+            Prefer something quick? Use the mail link below—no forms, no fuss.
+            Add <span class="tag">#early-access</span> in your subject for priority.
+          </p>
+        </div>
+        <div class="cta" style="margin-top:14px">
+          <!-- You can later replace this with your preferred alias -->
+          <a class="btn" href="mailto:team@bpai.in?subject=Early%20Access%20Request%20%F0%9F%9A%80&body=Hi%20BPAI%20team%2C%0A%0AWe%E2%80%99d%20like%20to%20explore%20early%20access.%20Here%E2%80%99s%20our%20use-case%20and%20context%3A%0A%E2%80%A2%20Company%3A%0A%E2%80%A2%20Problem%3A%0A%E2%80%A2%20Current%20stack%3A%0A%E2%80%A2%20Why%20now%3A%0A%0AThanks!">
+            Email team@bpai.in
+          </a>
+          <a class="btn alt" href="#home">Back to top</a>
+        </div>
+        <p class="sm">No newsletter yet. When we’re ready, we’ll announce it here.</p>
+      </article>
+    </section>
+
+    <!-- Footer -->
+    <footer class="foot">
+      <div>
+        © <span id="year"></span> Brightpath Technology &amp; Services Private Limited
+        <span class="sep">/</span>
+        <span class="status"><span class="dot" aria-hidden="true"></span> Stealth mode</span>
+      </div>
+      <div>
+        <a class="link" href="mailto:team@bpai.in">Contact</a>
+        <span class="sep">/</span>
+        <a class="link" href="#vision">Vision</a>
+        <span class="sep">/</span>
+        <a class="link" href="#early">Early access</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Lightweight niceties
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Simple scroll reveal
+    const reveal = () => {
+      const els = document.querySelectorAll('.card, .nav, .hero, .marquee, .foot');
+      const vh = window.innerHeight;
+      els.forEach(el => {
+        const r = el.getBoundingClientRect();
+        if (!el.dataset.shown && r.top < vh * 0.92) {
+          el.dataset.shown = "1";
+          el.animate(
+            [{opacity:0, transform:'translateY(8px)'},{opacity:1, transform:'translateY(0)'}],
+            {duration: 550, easing:'cubic-bezier(.2,.8,.2,1)', fill:'both'}
+          );
+        }
+      });
+    };
+    reveal(); addEventListener('scroll', reveal, {passive:true});
+  </script>
+
+  <!-- JSON-LD (basic Organization schema) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Brightpath Technology & Services Private Limited",
+    "url": "https://bpai.in",
+    "brand": "BPAI",
+    "description": "Crafting cutting-edge AI solutions. Currently in stealth.",
+    "sameAs": []
+  }
+  </script>
+</body>
+</html>
