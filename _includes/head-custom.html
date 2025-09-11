@@ -1,3 +1,11 @@
 <!-- Custom head tags -->
 <link rel="icon" type="image/x-icon" href="{{ site.favicon }}">
 <link rel="shortcut icon" type="image/x-icon" href="{{ site.favicon }}">
+<!-- Social preview meta (works with jekyll-seo-tag defaults) -->
+<meta property="og:image" content="{{ page.image | default: site.logo | absolute_url }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.title | default: site.title }}">
+<meta name="twitter:description" content="{{ page.description | default: site.description }}">
+<meta name="twitter:image" content="{{ page.image | default: site.logo | absolute_url }}">
