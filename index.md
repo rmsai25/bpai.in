@@ -4,7 +4,6 @@ title: Home
 ---
 
 <style>
-/* ----- Light corporate look to match your grey/white logo ----- */
 :root{
   --ink:#1f2328; --ink2:#5a616b; --line:#e6e8ef;
   --panel:#f7f8fb; --brand:#9b9b9b;
@@ -12,10 +11,10 @@ title: Home
 .page-header { background: #ffffff; color: var(--ink); border-bottom: 1px solid var(--line); }
 .project-name { color: #2a2e34; }
 .project-tagline { color: var(--ink2); }
-.btn { color:#222; border:1px solid var(--line); background: linear-gradient(180deg,#f2f3f6,#eceef2); font-weight:700; }
-.btn:hover{ border-color:#cfd3da; }
+.btn { color:#222; border:1px solid var(--line); background: linear-gradient(180deg,#f2f3f6,#eceef2); font-weight:700; border-radius:10px; padding:10px 16px; }
+.btn:hover{ border-color:#cfd3da; background:linear-gradient(180deg,#fefefe,#f5f5f5); }
 .main-content { color: var(--ink); }
-.section { background:#fff; border:1px solid var(--line); border-radius:18px; padding:22px; box-shadow:0 14px 40px rgba(15,17,24,.06); }
+.section { background:#fff; border:1px solid var(--line); border-radius:18px; padding:22px; box-shadow:0 14px 40px rgba(15,17,24,.06); margin-top:22px; }
 .grid { display:grid; grid-template-columns: repeat(12, 1fr); gap:18px; }
 .card { grid-column: span 6; background:#fff; border:1px solid var(--line); border-radius:16px; padding:18px; }
 @media (max-width: 900px){ .card{ grid-column: span 12; } }
@@ -25,6 +24,9 @@ title: Home
 .chips{margin-top:10px;display:flex;gap:10px;flex-wrap:wrap}
 .chips span{border:1px solid var(--line);border-radius:999px;padding:6px 10px;background:#fff;color:#3f444b;font-weight:600}
 .footer-note{color:var(--ink2);font-size:.95rem;margin-top:8px}
+
+/* Hide GitHub Pages default footer */
+.site-footer { display: none !important; }
 </style>
 
 <div align="center">
@@ -32,7 +34,7 @@ title: Home
   <p class="kicker">Brightpath Technology &amp; Services Private Limited</p>
   <h1 class="project-name">Cutting-edge AI. Production-ready.</h1>
   <p class="project-tagline">
-    We build pragmatic, private, and reliable AI systems for real businesses.
+    We build pragmatic, private, and reliable AI systems for real businesses.<br/>
     Currently in stealth — early partners welcome.
   </p>
   <p>
@@ -41,7 +43,7 @@ title: Home
   </p>
 </div>
 
-<div class="section" style="margin-top:22px">
+<div class="section">
   <div class="grid">
     <div class="card">
       <span class="badge">Vision</span>
@@ -70,7 +72,7 @@ title: Home
   </div>
 </div>
 
-<div id="values" class="section" style="margin-top:18px">
+<div id="values" class="section">
   <span class="badge">Values</span>
   <h3>How we work</h3>
   <ul>
@@ -85,6 +87,6 @@ title: Home
   </p>
 </div>
 
-<div align="center" class="footer-note">
+<div align="center" class="footer-note" style="margin-top:40px; padding:20px; border-top:1px solid #eee;">
   © {{ "now" | date: "%Y" }} Brightpath Technology &amp; Services Private Limited • Stealth mode
 </div>
