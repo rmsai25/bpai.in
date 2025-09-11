@@ -27,14 +27,17 @@ title: Home
 
 /* Hide GitHub Pages default footer */
 .site-footer { display: none !important; }
+
+/* Hide the Cayman header GitHub button */
+.page-header .btn { display: none !important; }
 </style>
 
 <div align="center">
-  <img class="hero-logo" src="{{ site.logo }}" alt="Brightpath AI logo">
+  <img class="hero-logo" src="{{ site.logo }}" alt="Brightpath AI logo" />
   <p class="kicker">Brightpath Technology &amp; Services Private Limited</p>
   <h1 class="project-name">Cutting-edge AI. Production-ready.</h1>
   <p class="project-tagline">
-    We build pragmatic, private, and reliable AI systems for real businesses.<br/>
+    We build pragmatic, private, and reliable AI systems for real businesses.<br />
     Currently in stealth — early partners welcome.
   </p>
   <p>
@@ -63,9 +66,9 @@ title: Home
       <span class="badge">Focus</span>
       <h3>What we build</h3>
       <p>
-        • Agentic workflows for ops &amp; support<br/>
-        • Enterprise-ready private RAG<br/>
-        • Evaluation, safety &amp; observability<br/>
+        • Agentic workflows for ops &amp; support<br />
+        • Enterprise-ready private RAG<br />
+        • Evaluation, safety &amp; observability<br />
         • On-device &amp; edge inference
       </p>
     </div>
