@@ -2,72 +2,173 @@
 layout: default
 title: Brightpath AI
 description: Brightpath AI builds pragmatic, private, and reliable AI systems for real businesses. Privacy-first. Currently in stealth — early partners welcome.
-image: /assets/img/og-bpai.png   # 1200x630 recommended; falls back to logo if missing
+image: /assets/img/og-bpai.png
 permalink: /
 ---
 
 <style>
-:root{
-  --ink:#1f2328; --ink2:#5a616b; --line:#e6e8ef;
-  --panel:#f7f8fb; --brand:#9b9b9b;
+:root {
+  --ink: #1f2328;
+  --ink2: #5a616b;
+  --line: #e6e8ef;
+  --panel: #f7f8fb;
+  --brand: #9b9b9b;
 
-  --btn-text:#16181c;
-  --btn-pri-bg1:#f2f3f6;
-  --btn-pri-bg2:#e8eaf0;
-  --btn-pri-border:#cfd4dd;
-  --btn-border:#dfe3ea;
-  --btn-shadow:0 10px 30px rgba(15,17,24,.08);
+  --btn-text: #16181c;
+  --btn-pri-bg1: #f2f3f6;
+  --btn-pri-bg2: #e8eaf0;
+  --btn-pri-border: #cfd4dd;
+  --btn-border: #dfe3ea;
+  --btn-shadow: 0 10px 30px rgba(15, 17, 24, 0.08);
 }
 
 /* Typography */
-html,body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,"Noto Sans",sans-serif}
-h1,h2,h3{font-family:"DM Sans",Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,"Noto Sans",sans-serif}
+html, body {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+h1, h2, h3 {
+  font-family: "DM Sans", Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", sans-serif;
+}
 
 /* Header */
-.page-header{background:#ffffff;color:var(--ink);border-bottom:1px solid var(--line)}
-.project-name{color:#2a2e34}
-.project-tagline{color:var(--ink2)}
+.page-header {
+  background: #ffffff;
+  color: var(--ink);
+  border-bottom: 1px solid var(--line);
+}
+.project-name {
+  color: #2a2e34;
+}
+.project-tagline {
+  color: var(--ink2);
+}
+
 /* Hide Cayman’s GitHub button + footer */
-.page-header .btn{display:none!important}
-.site-footer{display:none!important}
+.page-header .btn {
+  display: none !important;
+}
+.site-footer {
+  display: none !important;
+}
 
 /* Buttons */
-.btn{display:inline-block;border-radius:12px;padding:12px 18px;font-weight:700;letter-spacing:.2px;text-decoration:none;transition:.18s ease;outline:0}
-.btn:hover{transform:translateY(-1px)}
-.btn:focus-visible{box-shadow:0 0 0 4px rgba(0,0,0,.06)}
+.btn {
+  display: inline-block;
+  border-radius: 0px; /* <-- square edges */
+  padding: 12px 18px;
+  font-weight: 700;
+  letter-spacing: .2px;
+  text-decoration: none;
+  transition: .18s ease;
+  outline: 0;
+}
+.btn:hover {
+  transform: translateY(-1px);
+}
+.btn:focus-visible {
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, .06);
+}
 
-.btn.primary{
-  color:var(--btn-text);
-  background:linear-gradient(180deg,var(--btn-pri-bg1),var(--btn-pri-bg2));
-  border:1px solid var(--btn-pri-border);
-  box-shadow:var(--btn-shadow),inset 0 1px 0 #fff;
+.btn.primary {
+  color: var(--btn-text);
+  background: linear-gradient(180deg, var(--btn-pri-bg1), var(--btn-pri-bg2));
+  border: 1px solid var(--btn-pri-border);
+  box-shadow: var(--btn-shadow), inset 0 1px 0 #fff;
 }
-.btn.primary:hover{box-shadow:0 16px 36px rgba(15,17,24,.10),inset 0 1px 0 #fff;border-color:#c7ccd6}
-.btn.ghost{
-  color:var(--btn-text);
-  background:#fff;
-  border:1px solid var(--btn-border);
+.btn.primary:hover {
+  box-shadow: 0 16px 36px rgba(15, 17, 24, .10), inset 0 1px 0 #fff;
+  border-color: #c7ccd6;
 }
-.btn.ghost:hover{border-color:#cfd3da;background:linear-gradient(180deg,#fff,#f7f8fb)}
+.btn.ghost {
+  color: var(--btn-text);
+  background: #fff;
+  border: 1px solid var(--btn-border);
+}
+.btn.ghost:hover {
+  border-color: #cfd3da;
+  background: linear-gradient(180deg, #fff, #f7f8fb);
+}
 
 /* Sections */
-.main-content{color:var(--ink)}
-.section{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 14px 40px rgba(15,17,24,.06);margin-top:22px}
-.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
-.card{grid-column:span 6;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px}
-@media (max-width:900px){.card{grid-column:span 12}}
+.main-content {
+  color: var(--ink);
+}
+.section {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 22px;
+  box-shadow: 0 14px 40px rgba(15, 17, 24, .06);
+  margin-top: 22px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 18px;
+}
+.card {
+  grid-column: span 6;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 18px;
+}
+@media (max-width: 900px) {
+  .card {
+    grid-column: span 12;
+  }
+}
 
-.badge{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:6px 10px;background:#fff;color:#3f444b;font-weight:700}
-.kicker{letter-spacing:.18em;text-transform:uppercase;color:#6b6f75;font-weight:800;font-size:.78rem}
-.hero-logo{width:min(420px,90%);height:auto;filter:drop-shadow(0 8px 24px rgba(0,0,0,.08));margin:0 auto 8px;display:block}
-.chips{margin-top:10px;display:flex;gap:10px;flex-wrap:wrap}
-.chips span{border:1px solid var(--line);border-radius:999px;padding:6px 10px;background:#fff;color:#3f444b;font-weight:600}
-.footer-note{color:var(--ink2);font-size:.95rem;margin-top:8px}
+.badge {
+  display: inline-block;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 6px 10px;
+  background: #fff;
+  color: #3f444b;
+  font-weight: 700;
+}
+.kicker {
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #6b6f75;
+  font-weight: 800;
+  font-size: .78rem;
+  margin-top: 8px;
+}
+.hero-logo {
+  width: min(420px, 90%);
+  height: auto;
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, .08));
+  margin: 10px auto 8px;
+  display: block;
+}
+.chips {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.chips span {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 6px 10px;
+  background: #fff;
+  color: #3f444b;
+  font-weight: 600;
+}
+.footer-note {
+  color: var(--ink2);
+  font-size: .95rem;
+  margin-top: 8px;
+}
 </style>
 
-<div align="center">
-  <img class="hero-logo" src="{{ site.logo | default: '/assets/img/FullLogo_Transparent.png' }}" alt="Brightpath AI logo" />
+<div align="center" style="margin-top: 10px;">
   <p class="kicker">Brightpath Technology &amp; Services Private Limited</p>
+  <img class="hero-logo" src="{{ site.logo | default: '/assets/img/FullLogo_Transparent.png' }}" alt="Brightpath AI logo" />
   <h1 class="project-name">Cutting-edge AI. Production-ready.</h1>
   <p class="project-tagline">
     We build pragmatic, private, and reliable AI systems for real businesses.<br />
@@ -120,6 +221,25 @@ h1,h2,h3{font-family:"DM Sans",Inter,system-ui,-apple-system,Segoe UI,Roboto,Ari
   </ul>
   <p class="footer-note">
     Interested in co-building? Email <a href="mailto:team@bpai.in">team@bpai.in</a> with your use-case.
+  </p>
+</div>
+
+<div class="section">
+  <span class="badge">We're Hiring</span>
+  <h3>Join our team</h3>
+  <p>
+    We're looking for engineers, researchers, and operators who care about performance, privacy, and product quality.
+    If you're excited about production-grade AI, send your resume to <a href="mailto:team@bpai.in">team@bpai.in</a>.
+  </p>
+</div>
+
+<div class="section">
+  <span class="badge">Office</span>
+  <h3>Where we work</h3>
+  <p>
+    📍 <a href="https://www.google.com/maps?q=12.917030988897729,77.63807487386386" target="_blank">
+    7, 14th Main Rd, 1st Sector, HSR Layout 5th Sector, Bengaluru, Karnataka 560102
+    </a>
   </p>
 </div>
 
